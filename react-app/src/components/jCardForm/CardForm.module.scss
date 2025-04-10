@@ -1,0 +1,9 @@
+@import '../../styles/settings.scss';
+
+.cardForm {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
