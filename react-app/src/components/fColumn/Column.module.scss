@@ -2,6 +2,7 @@
 @import '../../styles/settings.scss';
 
 .column {
+    position: relative;
     flex-shrink: 0;
     width: calc(33% - 12px);
     background: $color-light;
@@ -34,6 +35,19 @@
 .cards {
     padding: math.div($base-size, 2) 0;
 }
+
+.removeButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #e74c3c;
+    cursor: pointer;
+    padding: 0;
+}
+
 
 @media (max-width: 767px) {
     .column {

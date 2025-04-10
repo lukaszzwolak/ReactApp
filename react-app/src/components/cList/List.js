@@ -65,6 +65,12 @@ const List = () => {
         setColumns(updatedColumns);
     };
 
+    const removeColumn = columnId => {
+        const updatedColumns = columns.filter(column => column.id !== columnId);
+        setColumns(updatedColumns);
+    };
+
+
     return (
         <div className={styles.list}>
             <header className={styles.header}>
@@ -81,6 +87,7 @@ const List = () => {
                         cards={column.cards}
                         addCard={addCard}
                         removeCard={removeCard}
+                        removeColumn={removeColumn}
                     />
                 ))}
             </section>

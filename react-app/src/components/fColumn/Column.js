@@ -22,6 +22,14 @@ const Column = props => {
                     />
                 ))}
             </ul>
+            <button
+                className={styles.removeButton}
+                onClick={() => props.removeColumn(props.id)}
+            >
+                ×
+            </button>
+
+
             <CardForm columnId={props.id} action={props.addCard} />
         </article>
     );
