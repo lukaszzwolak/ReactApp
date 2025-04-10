@@ -13,7 +13,14 @@ const Column = props => {
 
 
             <ul className={styles.cards}>
-                {props.cards.map(card => <Card key={card.id} title={card.title} />)}
+                {props.cards.map(card => (
+                    <Card
+                        key={card.id}
+                        id={card.id}
+                        title={card.title}
+                        onRemove={(cardId) => props.removeCard(cardId, props.id)}
+                    />
+                ))}
             </ul>
             <CardForm columnId={props.id} action={props.addCard} />
         </article>

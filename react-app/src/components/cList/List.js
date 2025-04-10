@@ -51,6 +51,20 @@ const List = () => {
 
     };
 
+    const removeCard = (cardId, columnId) => {
+        const updatedColumns = columns.map(column => {
+            if (column.id === columnId) {
+                return {
+                    ...column,
+                    cards: column.cards.filter(card => card.id !== cardId)
+                };
+            }
+            return column;
+        });
+
+        setColumns(updatedColumns);
+    };
+
     return (
         <div className={styles.list}>
             <header className={styles.header}>
@@ -58,7 +72,17 @@ const List = () => {
             </header>
             <p className={styles.description}>Interesting things I want to check out</p>
             <section className={styles.columns}>
-                {columns.map(column => <Column key={column.id} id={column.id} title={column.title} icon={column.icon} cards={column.cards} addCard={addCard} />)}
+                {columns.map(column => (
+                    <Column
+                        key={column.id}
+                        id={column.id}
+                        title={column.title}
+                        icon={column.icon}
+                        cards={column.cards}
+                        addCard={addCard}
+                        removeCard={removeCard}
+                    />
+                ))}
             </section>
             <ColumnForm action={addColumn} />
         </div>
