@@ -33,7 +33,7 @@ const Column = props => {
                 ×
             </button>
 
-            <CardForm columnId={props.id} action={props.addCard} />
+            <CardForm columnId={props.id} />
         </article>
     );
 };
