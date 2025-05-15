@@ -18,6 +18,9 @@ const reducer = (state, action) => {
 
         default:
             return state;
+
+        case 'UPDATE_SEARCHSTRING':
+            return { ...state, searchString: action.payload };
     }
 };
 
