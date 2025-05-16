@@ -1,17 +1,32 @@
-import Hero from './components/aHero/Hero.js';
-import SearchForm from './components/bSearchForm/SearchForm.js';
-import List from './components/cList/List.js';
-import Container from './components/gContainer/Container.js';
+import Hero from './components/aHero/Hero';
+import SearchForm from './components/bSearchForm/SearchForm';
+import List from './components/cList/List';
+import Container from './components/gContainer/Container';
+import NavBar from './components/NavBar/NavBar';
+import { Routes, Route } from 'react-router-dom';
+
+// Tymczasowo
+const Favorite = () => <h2 style={{ color: 'white' }}>Favorite Page</h2>;
+const About = () => <h2 style={{ color: 'white' }}>About Page</h2>;
 
 const App = () => {
   return (
-    <div>
+    <main>
+      <NavBar />
       <Container>
-        <Hero />
-        <SearchForm />
-        <List />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <SearchForm />
+              <List />
+            </>
+          } />
+          <Route path="/favorite" element={<Favorite />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </Container>
-    </div >
+    </main>
   );
 };
 
