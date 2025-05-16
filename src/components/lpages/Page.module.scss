@@ -1,0 +1,13 @@
+@import '../../styles/settings.scss';
+
+.wrapper {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: $color-light;
+}

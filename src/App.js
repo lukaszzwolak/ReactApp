@@ -2,12 +2,10 @@ import Hero from './components/aHero/Hero';
 import SearchForm from './components/bSearchForm/SearchForm';
 import List from './components/cList/List';
 import Container from './components/gContainer/Container';
-import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/kNavBar/NavBar';
 import { Routes, Route } from 'react-router-dom';
-
-// Tymczasowo
-const Favorite = () => <h2 style={{ color: 'white' }}>Favorite Page</h2>;
-const About = () => <h2 style={{ color: 'white' }}>About Page</h2>;
+import Favorite from './components/lpages/Favorite';
+import About from './components/lpages/About';
 
 const App = () => {
   return (
