@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import Container from '../gContainer/Container';
 import styles from './NavBar.module.scss';
-import { faTasks } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTasks } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
     return (
@@ -13,9 +13,30 @@ const NavBar = () => {
                         <FontAwesomeIcon icon={faTasks} />
                     </NavLink>
                     <ul className={styles.menu}>
-                        <li><NavLink to="/" className={({ isActive }) => isActive ? styles.active : undefined}>Home</NavLink></li>
-                        <li><NavLink to="/favorite" className={({ isActive }) => isActive ? styles.active : undefined}>Favorite</NavLink></li>
-                        <li><NavLink to="/about" className={({ isActive }) => isActive ? styles.active : undefined}>About</NavLink></li>
+                        <li>
+                            <NavLink
+                                to="/"
+                                className={({ isActive }) => isActive ? styles.linkActive : undefined}
+                            >
+                                Home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/favorite"
+                                className={({ isActive }) => isActive ? styles.linkActive : undefined}
+                            >
+                                Favorite
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/about"
+                                className={({ isActive }) => isActive ? styles.linkActive : undefined}
+                            >
+                                About
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
             </Container>

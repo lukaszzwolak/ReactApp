@@ -14,8 +14,8 @@
 
 .icon {
     font-size: 24px;
-    text-decoration: none;
     color: white;
+    text-decoration: none;
 }
 
 .menu {
@@ -30,9 +30,13 @@
     text-decoration: none;
     color: white;
     transition: color 0.2s;
+
+    &:hover {
+        color: $color-warning;
+    }
 }
 
-.menu li a.active {
+.linkActive {
+    color: $color-warning;
     font-weight: bold;
-    color: $color-main;
 }
