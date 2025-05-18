@@ -1,13 +1,13 @@
 import Hero from '../aHero/Hero';
 import SearchForm from '../bSearchForm/SearchForm';
-import List from '../cList/List';
+import Lists from '../nLists/Lists'; // poprawna ścieżka do komponentu Lists
 
 const Home = () => {
     return (
         <>
             <Hero />
             <SearchForm />
-            <List />
+            <Lists />
         </>
     );
 };
