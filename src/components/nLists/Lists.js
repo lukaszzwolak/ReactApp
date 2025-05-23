@@ -1,12 +1,10 @@
-import { useSelector } from "react-redux"
-import { getAllLists } from "../../redux/store"
+import { useSelector } from "react-redux";
+import { getAllLists } from "../../redux/store";
 import styles from './Lists.module.scss';
 import { Link } from 'react-router-dom';
 
 const Lists = () => {
     const lists = useSelector(getAllLists);
-    console.log('State:', useSelector(state => state));
-
 
     return (
         <section className={styles.lists}>
@@ -19,6 +17,6 @@ const Lists = () => {
             ))}
         </section>
     );
-}
+};
 
 export default Lists;

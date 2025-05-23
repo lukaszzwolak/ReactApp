@@ -25,7 +25,7 @@ const List = () => {
                     />
                 ))}
             </section>
-            <ColumnForm />
+            <ColumnForm listId={listId} />
         </div>
     );
 };
