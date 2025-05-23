@@ -3,6 +3,7 @@ import NavBar from './components/kNavBar/NavBar';
 import Favorite from './components/lpages/Favorite';
 import About from './components/lpages/About';
 import Home from './components/lpages/Home';
+import List from './components/cList/List';
 import { Routes, Route } from 'react-router-dom';
 import NotFound from './components/lpages/NotFound';
 
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/favorite" element={<Favorite />} />
+          <Route path="/list/:listId" element={<List />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>
