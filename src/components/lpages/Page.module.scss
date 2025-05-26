@@ -11,3 +11,28 @@
     margin-bottom: 10px;
     color: $color-light;
 }
+
+.cardsList {
+    background-color: #ffffff;
+    padding: $base-size * 2;
+    border-radius: $radius;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: $base-size;
+    color: black;
+
+
+    .cardsList li {
+        border: 1px solid $color-light;
+        padding: $base-size;
+        border-radius: $radius;
+        background-color: $color-light;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

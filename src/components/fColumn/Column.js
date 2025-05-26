@@ -20,17 +20,10 @@ const Column = props => {
                         key={card.id}
                         id={card.id}
                         title={card.title}
-                        onRemove={(cardId) => props.removeCard(cardId, props.id)}
+                        isFavorite={card.isFavorite}
                     />
                 ))}
             </ul>
-
-            <button
-                className={styles.removeButton}
-                onClick={() => props.removeColumn(props.id)}
-            >
-                ×
-            </button>
 
             <CardForm columnId={props.id} />
         </article>
