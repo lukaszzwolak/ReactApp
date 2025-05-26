@@ -2,7 +2,8 @@ import styles from './List.module.scss';
 import Column from '../fColumn/Column.js';
 import ColumnForm from '../hColumnForm/ColumnForm.js';
 import { useSelector } from 'react-redux';
-import { getListById, getColumnsByList } from '../../redux/store';
+import { getListById } from '../../redux/listsRedux';
+import { getColumnsByList } from '../../redux/columnsRedux';
 import { Navigate, useParams } from 'react-router';
 import SearchForm from '../bSearchForm/SearchForm';
 

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from '../eButton/Button';
 import TextInput from '../dTextInput/TextInput';
 import { useDispatch } from 'react-redux';
-import { addColumn } from '../../redux/store';
+import { addColumn } from '../../redux/columnsRedux';
 
 const ColumnForm = props => {
     const [title, setTitle] = useState('');
