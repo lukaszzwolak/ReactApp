@@ -1,0 +1,28 @@
+@import '../../styles/settings.scss';
+
+.listForm {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    color: white;
+}
+
+input {
+    margin-top: 6px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+}
